@@ -1,0 +1,23 @@
+{
+  "name": "todo-api_by_node.js",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "db:init": "npm run db:create && npm run db:migrate && npm run db:seed",
+    "db:create": "sequelize db:create nuxt_todo",
+    "db:migrate": "sequelize db:migrate",
+    "db:seed": "sequelize db:seed:all",
+    "db:drop": "sequelize db:drop nuxt_todo"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "express": "~4.16.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "morgan": "~1.9.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0"
+  }
+}
